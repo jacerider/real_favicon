@@ -1,5 +1,5 @@
 name: 'Real Favicon'
 description: 'A favicon generator for all platforms utilizing http://realfavicongenerator.net.'
-package: JaceRider
+package: User Interface
 type: module
 core_version_requirement: ^8.8 || ^9
