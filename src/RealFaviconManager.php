@@ -8,7 +8,7 @@ use Drupal\Core\Cache\CacheBackendInterface;
 use Drupal\Core\Cache\Cache;
 
 /**
- * Class RealFaviconManager.
+ * The real favicon manager.
  */
 class RealFaviconManager implements RealFaviconManagerInterface {
 

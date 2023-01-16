@@ -314,7 +314,9 @@ class RealFavicon extends ConfigEntityBase implements RealFaviconInterface {
    *   The normalized path.
    */
   protected function normalizePath($file_path) {
-    return file_url_transform_relative(file_create_url($this->getDirectory() . $file_path));
+    /** @var \Drupal\Core\File\FileUrlGeneratorInterface $url_generator */
+    $url_generator = \Drupal::service('file_url_generator');
+    return $url_generator->generateString($this->getDirectory() . $file_path);
   }
 
 }

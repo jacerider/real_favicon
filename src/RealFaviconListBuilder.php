@@ -89,7 +89,7 @@ class RealFaviconListBuilder extends ConfigEntityListBuilder {
 
     if (!empty($favicon_options)) {
       $themes = $themes = $this->themeHandler->listInfo();
-      uasort($themes, 'system_sort_modules_by_info_name');
+      uasort($themes, 'Drupal\Core\Extension\ExtensionList::sortByName');
 
       $theme_options = [];
       foreach ($themes as &$theme) {
