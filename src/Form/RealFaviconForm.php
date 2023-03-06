@@ -14,6 +14,13 @@ use Drupal\Core\Form\FormStateInterface;
 class RealFaviconForm extends EntityForm {
 
   /**
+   * The file entity.
+   *
+   * @var \Drupal\file\FileInterface
+   */
+  protected $file;
+
+  /**
    * {@inheritdoc}
    */
   public function form(array $form, FormStateInterface $form_state) {
@@ -73,10 +80,7 @@ class RealFaviconForm extends EntityForm {
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
     parent::validateForm($form, $form_state);
-    $values = $form_state->getValues();
-
     $this->file = file_save_upload('file', $form['file']['#upload_validators'], FALSE, 0);
-
     // Ensure we have the file uploaded.
     if (!$this->file && $this->entity->isNew()) {
       $form_state->setErrorByName('file', $this->t('File to import not found.'));

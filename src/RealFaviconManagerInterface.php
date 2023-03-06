@@ -3,7 +3,7 @@
 namespace Drupal\real_favicon;
 
 /**
- * Interface RealFaviconManagerInterface.
+ * Real favicon manager interface.
  */
 interface RealFaviconManagerInterface {
 

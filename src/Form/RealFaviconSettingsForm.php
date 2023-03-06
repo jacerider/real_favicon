@@ -40,6 +40,10 @@ class RealFaviconSettingsForm extends ConfigFormBase {
    *   An associative array containing the structure of the form.
    * @param \Drupal\Core\Form\FormStateInterface $form_state
    *   The current state of the form.
+   * @param array $favicon_options
+   *   An array of favicon options.
+   * @param array $theme_options
+   *   An array of theme options.
    *
    * @return array
    *   Form definition array.
@@ -59,7 +63,7 @@ class RealFaviconSettingsForm extends ConfigFormBase {
     foreach ($theme_options as $id => $name) {
       $form['themes'][$id] = [
         '#type' => 'select',
-        '#title' => $this->t('%name Favicon', ['%name' => $name]),
+        '#title' => $this->t('@name Favicon', ['@name' => $name]),
         '#options' => [0 => '- Use Drupal Default -'] + $favicon_options,
         '#default_value' => !empty($config_themes[$id]) && isset($favicon_options[$config_themes[$id]]) ? $config_themes[$id] : 0,
       ];
