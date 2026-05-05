@@ -39,7 +39,6 @@ use Drupal\Core\File\FileSystemInterface;
  *     "archive",
  *   },
  *   links = {
- *     "canonical" = "/admin/structure/real-favicon/{real_favicon}",
  *     "add-form" = "/admin/structure/real-favicon/add",
  *     "edit-form" = "/admin/structure/real-favicon/{real_favicon}/edit",
  *     "delete-form" = "/admin/structure/real-favicon/{real_favicon}/delete",
