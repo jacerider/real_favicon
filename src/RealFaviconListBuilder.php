@@ -68,6 +68,8 @@ class RealFaviconListBuilder extends ConfigEntityListBuilder {
       'data' => [
         '#theme' => 'image',
         '#uri' => $entity->getThumbnail(),
+        '#width' => 24,
+        '#height' => 24,
       ]
     ];
     $row['label'] = $entity->label();

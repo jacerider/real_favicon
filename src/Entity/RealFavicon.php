@@ -158,7 +158,7 @@ class RealFavicon extends ConfigEntityBase implements RealFaviconInterface {
   /**
    * Get a favicon image.
    */
-  public function getThumbnail($image_name = 'favicon-16x16.png') {
+  public function getThumbnail($image_name = 'favicon-96x96.png') {
     return $this->getDirectory() . '/' . $image_name;
   }
 
