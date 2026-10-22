@@ -48,7 +48,7 @@ class RealFaviconSettingsForm extends ConfigFormBase {
    * @return array
    *   Form definition array.
    */
-  public function buildForm(array $form, FormStateInterface $form_state, array $favicon_options = NULL, array $theme_options = NULL) {
+  public function buildForm(array $form, FormStateInterface $form_state, ?array $favicon_options = NULL, ?array $theme_options = NULL) {
     $config = $this->config('real_favicon.settings');
     $config_themes = $config->get('themes');
 
