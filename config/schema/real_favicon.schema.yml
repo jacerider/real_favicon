@@ -13,6 +13,10 @@ real_favicon.real_favicon.*:
     tags:
       type: sequence
       label: 'Tags'
+      sequence:
+        type: string
     archive:
       type: sequence
       label: 'Archive'
+      sequence:
+        type: string
